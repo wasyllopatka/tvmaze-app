@@ -1,0 +1,15 @@
+.show-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-card-header-text {
+    width: 100%;
+
+    .mat-card-title {
+        display: flex;
+        justify-content: space-between;
+    }
+}

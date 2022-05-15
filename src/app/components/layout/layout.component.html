@@ -1,0 +1,17 @@
+<mat-toolbar>
+    <span>TVMAZE</span>
+</mat-toolbar>
+
+<nav mat-tab-nav-bar>
+    <a mat-tab-link
+       *ngFor="let link of navLinks"
+       [routerLink]="link.path"
+       routerLinkActive="active"
+       #rla="routerLinkActive"
+       [active]="rla.isActive">
+        {{ link.label }}
+    </a>
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>

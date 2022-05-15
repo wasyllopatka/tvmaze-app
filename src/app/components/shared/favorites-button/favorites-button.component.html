@@ -1,0 +1,9 @@
+<ng-container *ngIf="!show?.isFavorite; else favorite">
+    <button mat-stroked-button color="primary" (click)="addToFavorites(show)">Add favorite
+    </button>
+</ng-container>
+
+<ng-template #favorite>
+    <button mat-stroked-button color="warn" (click)="removeFromFavorites(show)">Remove favorite
+    </button>
+</ng-template>

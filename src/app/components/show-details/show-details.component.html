@@ -1,0 +1,22 @@
+<ng-container *ngIf="showDetails$ | async as show">
+    <mat-card matCardElevation>
+        <mat-card-header>
+            <mat-card-title><span>{{ show.name}}</span>
+                <button mat-stroked-button color="primary"
+                        (click)="navigateToShows()">Back to shows
+                </button>
+            </mat-card-title>
+            <mat-card-subtitle>{{ show.rating.average}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="show-details">
+                <img mat-card-image [src]="show.image | showImage" alt="Show image" style="width: 200px">
+                <div [innerHTML]="show.summary"></div>
+            </div>
+        </mat-card-content>
+
+        <app-favorites-button [show]="show | getShowDetails:(favorites$ | async)"></app-favorites-button>
+    </mat-card>
+</ng-container>
+

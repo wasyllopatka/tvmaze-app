@@ -1,0 +1,19 @@
+:host {
+    width: 100%;
+}
+
+.search {
+    &-form {
+        display: flex;
+        margin: 0 25px;
+
+        &-field {
+            margin: 20px;
+            width: 100%;
+
+            &-icon {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+<app-search-form
+    [debounceTime]="300"
+    (searchValue)="searchValueChange($event)"
+>
+</app-search-form>
+<app-shows-view [shows]="filteredFavorites"></app-shows-view>
+

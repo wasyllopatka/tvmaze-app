@@ -1,0 +1,16 @@
+<div class="search">
+    <div class="search-form">
+        <mat-form-field class="search-form-field" appearance="outline">
+            <mat-label>Search</mat-label>
+            <input matInput type="text" spellcheck="false" data-lpignore="true" autocomplete="off" [value]="searchTerm"
+                   [formControl]="searchInput"/>
+
+            <mat-icon matSuffix *ngIf="!loading && searchTerm?.length" (click)="clear($event)"
+                      class="search-form-field-icon"> clear
+            </mat-icon>
+            <mat-icon matSuffix *ngIf="!searchTerm?.length" class="s earch-form-field-icon">search</mat-icon>
+            <mat-spinner matSuffix *ngIf="loading && searchTerm?.length" color="primary" diameter="30"
+                         class="search-form-field-spinner"></mat-spinner>
+        </mat-form-field>
+    </div>
+</div>

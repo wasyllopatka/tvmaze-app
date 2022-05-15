@@ -1,0 +1,24 @@
+<div class="shows">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div [fxFlex]="'20%'" fxFlex.md="25%" fxFlex.sm="33%" fxFlex.xs="100%"
+             *ngFor="let show of shows;  trackBy: trackById">
+            <mat-card matCardElevation>
+                <mat-card-header>
+                    <mat-card-title>{{ show.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image [src]="show.image | showImage" alt="Show image">
+                <mat-card-content>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <app-favorites-button [show]="show"></app-favorites-button>
+                    <button mat-stroked-button color="accent"
+                            (click)="navigateToDetails('shows', show.id)">
+                        Details
+                    </button>
+
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

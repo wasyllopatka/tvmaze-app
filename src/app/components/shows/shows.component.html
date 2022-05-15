@@ -1,0 +1,10 @@
+<app-search-form
+    [loading]="showsLoading$ | async"
+    [debounceTime]="600"
+    (searchValue)="searchValueChange($event)"
+>
+</app-search-form>
+<app-shows-view [shows]="shows$ | async"></app-shows-view>
+
+
+
